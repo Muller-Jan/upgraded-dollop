@@ -39,10 +39,10 @@ async def _(event):
 	if event.fwd_from:
 		return
 	to_anim = split(" ", event.text)[1]
-    try:
-        repeat_times = int(split(" ", event.text)[2]
-    except Exception:
-         repeat_times = 4
+    	try:
+        	repeat_times = int(split(" ", event.text)[2]
+    	except Exception:
+        	repeat_times = 4
 	deq = deque(list(to_anim))
 	for _ in range(len(to_anim) * repeat_times):
 		await asyncio.sleep(0.1)
