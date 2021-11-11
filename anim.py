@@ -45,6 +45,6 @@ async def _(event):
         repeat_times = 4
     deq = deque(list(to_anim))
     for _ in range(len(to_anim) * repeat_times):
-		await asyncio.sleep(0.1)
-		await event.edit("".join(deq))
-		deq.rotate(1)
+        await asyncio.sleep(0.1)
+        await event.edit("".join(deq))
+        deq.rotate(1)
