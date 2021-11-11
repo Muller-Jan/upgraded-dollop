@@ -38,7 +38,7 @@ async def _(event):
 async def _(event):
 	if event.fwd_from:
 		return
-	to_anim = split(" ", event.text)[1]
+	to_anim = split(" ", event.text, maxsplit=1)[1]
 	deq = deque(list(to_anim))
 	for _ in range(len(to_anim) * 4):
 		await asyncio.sleep(0.1)
